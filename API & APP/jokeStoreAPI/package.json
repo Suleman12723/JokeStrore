@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Suleman12723/JokesAPI.git"
+    "url": "git+https://github.com/Suleman12723/JokeStore.git"
   },
   "author": "Suleman Sohail",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Suleman12723/JokesAPI/issues"
+    "url": "https://github.com/Suleman12723/JokeStore/API & APP/jokeStoreAPI/issues"
   },
-  "homepage": "https://github.com/Suleman12723/JokesAPI#readme",
+  "homepage": "https://github.com/Suleman12723/JokeStore/API & APP/jokeStoreAPI/#README",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
