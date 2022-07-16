@@ -2,6 +2,12 @@
 
 This is a JokeStore API. This API is used to GET and POST Jokes.
 
+## POSTMAN API Collection
+
+Open this Collection with Postman
+
+[Collection](JokeAPI.postman_collection.json)
+
 ## API Reference
 
 #### Get all Jokes
