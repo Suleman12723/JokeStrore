@@ -31,7 +31,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/Joke", apiRoute);
+app.use("/api/joke", apiRoute);
 
 //error handler
 app.use((err, req, res, next) => {
