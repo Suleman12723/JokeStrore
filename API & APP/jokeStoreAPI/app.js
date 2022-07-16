@@ -16,11 +16,11 @@ mongoose
       console.log("DB successfully Connected");
     },
     (err) => {
-      next(err);
+      console.log(err);
     }
   )
   .catch((err) => {
-    next(err);
+    console.log(err);
   });
 ////////////////////////////////////////////////////////////////////////
 
