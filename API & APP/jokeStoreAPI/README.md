@@ -71,3 +71,9 @@ To run this project, you will need to add the following environment variables to
 `MONGO_URL`
 
 Your local or online DB url.
+
+## Cors
+
+Add your Client **Origin** (http://localhost:3001 or something) to the "whiteList array" in **cors.js** file
+
+`const whiteList = ["http://localhost:3000", "http://localhost:3001"];`
