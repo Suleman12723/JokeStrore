@@ -1,7 +1,7 @@
 {
   "name": "test_task",
   "version": "1.0.0",
-  "description": "This is a JokesAPI",
+  "description": "This is a JokeStoreAPI",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Suleman12723/JokeStore.git"
+    "url": "git+https://github.com/Suleman12723/JokeStrore.git"
   },
   "author": "Suleman Sohail",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Suleman12723/JokeStore/API & APP/jokeStoreAPI/issues"
+    "url": "https://github.com/Suleman12723/JokeStrore/API & APP/jokeStoreAPI/issues"
   },
-  "homepage": "https://github.com/Suleman12723/JokeStore/API & APP/jokeStoreAPI/#README",
+  "homepage": "https://github.com/Suleman12723/JokeStrore/API & APP/jokeStoreAPI/#README",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
