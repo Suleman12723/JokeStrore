@@ -7,6 +7,67 @@
   pointer-events: none;
 }
 
+.filter{
+  cursor:pointer;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: url("./images/backimg.jpg");
+    background-size: 100% 50vh;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:660px){
+  .main{
+    min-width:100%;
+  }
+  .background{
+    background-size: 100% 40vh;
+  }
+}
+
+@media only screen and (min-width:661px) and (max-width:768px){
+  .main{
+    min-width:90%;
+  }
+  .background{
+    background-size: 100% 40vh;
+  }
+}
+.Joke:nth-child(odd) {
+  background-color: #c5c7c9;
+}
+.Joke:nth-child(even) {
+  background-color: #ebeef2;
+}
+
+
+/* width */
+.listContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.listContainer::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.listContainer::-webkit-scrollbar-thumb {
+  background: #001f22; 
+}
+
+/* Handle on hover */
+.listContainer::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

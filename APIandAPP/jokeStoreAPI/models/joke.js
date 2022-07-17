@@ -4,7 +4,7 @@ const jokeSchema = new mongoose.Schema(
   {
     joke: {
       type: String,
-      minlength: 7,
+      minlength: 1,
       unique: true,
       required: true,
     },

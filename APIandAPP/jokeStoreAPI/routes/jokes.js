@@ -48,9 +48,19 @@ router
     }
   })
   .post(cors.corsWithOptions, (req, res, next) => {
+    if (req.body.jokeType.length > 0) {
+      if (
+        !req.body.jokeType.includes("office") &&
+        !req.body.jokeType.includes("friends")
+      ) {
+        let err = new Error("Not a correct Joke Type");
+        err.statusCode = 403;
+        return next(err);
+      }
+    }
     Joke.create({
-      joke: req.body.joke,
-      jokeType: req.body.jokeType ? req.body.jokeType : [],
+      joke: req.body.joke.toLowerCase(),
+      jokeType: req.body.jokeType.length > 0 ? req.body.jokeType : ["All"],
     })
       .then(
         (joke) => {

@@ -1,5 +1,5 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+const createError = require("http-errors");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -10,7 +10,9 @@ const apiRoute = require("./routes/jokes");
 ////////////////////// MONGODB CONNECTION /////////////////////////////
 const url = process.env.MONGO_URL;
 mongoose
-  .connect(url)
+  .connect(url, {
+    autoIndex: true,
+  })
   .then(
     () => {
       console.log("DB successfully Connected");
@@ -36,9 +38,15 @@ app.use("/api/joke", apiRoute);
 //error handler
 app.use((err, req, res, next) => {
   res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
-  res.json({ err: err.message });
-  //   console.log("error" + err.message + "\n" + "Status" + err.status);
+  // res.locals.error = req.app.get("env") === "development" ? err : {};
+
+  if (err.code === 11000) {
+    res.status(403);
+    res.json({ err: true, message: "Joke already exsists!" });
+  } else {
+    res.status(err.status || 500);
+    res.json({ err: true, message: err.message });
+  }
 });
 
 app.listen(3000, () => {
